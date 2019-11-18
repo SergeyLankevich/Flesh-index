@@ -75,7 +75,7 @@ def func_en(text, lang):
                 'FRE': FRE,
                 'ASL': ASL,
                 'ASW': ASW,
-                'complexity':complexity,
+                'complexity': complexity,
                 'objectivity': objectivity,
                 'tonality': tonality,
     }
@@ -122,13 +122,13 @@ def func_ru(text, lang):
 
     # Tonality of the text
     # TODO
-    x = True
+    '''x = True
     if x:
         tonality = loc.POLATITY_POZITIVE
     elif x:
         tonality = loc.POLARITY_NEUTRAL
     else:
-        tonality = loc.POLARITY_NEGATIVE
+        tonality = loc.POLARITY_NEGATIVE'''
 
     # Response
     response = {'sentence_count': sentence_count,
@@ -138,6 +138,6 @@ def func_ru(text, lang):
                 'ASL': ASL,
                 'ASW': ASW,
                 'complexity': complexity,
-                'tonality': tonality,
+                # 'tonality': tonality,
                 }
     return response

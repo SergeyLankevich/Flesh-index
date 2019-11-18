@@ -31,31 +31,17 @@ if text[-1] not in list('.!?'):
 
 if language == 'english':
     response = func_en(text, lang)
-    print(response)
-    '''
-    Предложений:
-    Слов:
-    Слогов:
-    Средняя длина предложения в словах:
-    Средняя длина слова в слогах:
-    Индекс удобочитаемости Флеша:
-    Очень трудно читать.
-    Тональность текста:
-    Объективность:
-    '''
 else:
     response = func_ru(text, lang)
-    print(response)
-    '''
-    Предложений:
-    Слов: 
-    Слогов:
-    Средняя длина предложения в словах:
-    Средняя длина слова в слогах:
-    Индекс удобочитаемости Флеша:
-    Текст очень легко читается(для младших школьников).
-    Тональность текста:
-    '''
+print(loc.WORDS, response['word_count'])
+print(loc.SYLLABLES, response['syllable_count'])
+print(loc.ASW, response['ASW'])
+print(loc.ASL, response['ASL'])
+print(loc.FRE, response['FRE'])
+print(response['complexity'])
+print(loc.TON, response['tonality'])
+if language == 'english':
+    print(loc.OB, response['objectivity'])
 
 
 
